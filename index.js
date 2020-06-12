@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 
 
-var server = app.listen(process.env.PORT , function () {
+var server = app.listen(process.env.PORT, function () {
     var host = server.address().address;
     var port = server.address().port;
 
@@ -16,7 +16,33 @@ var server = app.listen(process.env.PORT , function () {
 });
 
 app.get('/', function (req, res) {
-    res.send('/saveTime to save the current time. /getTime to get the saved time.');
+    res.send(`
+    https://github.com/Vetox/nodeMeetingTask
+
+Add Room :
+POST : https://node-meeting-task.herokuapp.com/addRoom
+
+{
+	"seats" : 25,
+	"amenities" : "AC",
+	"price" : 25
+}
+
+Show Roms : 
+GET : https://node-meeting-task.herokuapp.com/showRooms
+
+Add Booking : 
+POST : https://node-meeting-task.herokuapp.com/bookRoom
+
+{
+	"name" : "Karthikeyan M",
+	"date" : "12-11-2020",
+	"roomID" : 1
+}
+
+Show Bookings : 
+GET : https://node-meeting-task.herokuapp.com/showBookings
+    `);
 });
 
 app.get('/saveTime', function (req, res) {
