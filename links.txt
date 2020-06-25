@@ -1,0 +1,27 @@
+https://github.com/Vetox/nodeMeetingTask
+cf1702d88d36a32ddbf25b83435e6f9cd679b1d7
+
+
+Add Room :
+POST : https://node-meeting-task.herokuapp.com/addRoom
+
+{
+	"seats" : 25,
+	"amenities" : "AC",
+	"price" : 25
+}
+
+Show Roms : 
+GET : https://node-meeting-task.herokuapp.com/showRooms
+
+Add Booking : 
+POST : https://node-meeting-task.herokuapp.com/bookRoom
+
+{
+	"name" : "Karthikeyan M",
+	"date" : "12-11-2020",
+	"roomID" : 1
+}
+
+Show Bookings : 
+GET : https://node-meeting-task.herokuapp.com/showBookings
